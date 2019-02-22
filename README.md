@@ -32,7 +32,7 @@ If not, add and commit your changes and recheck git status.
 
 Now that we have a clean working directory, let's muck things up! (Sorry if you already had a untracked changes and cleaned them up; it's good practice at the very least!)
 
-Once again, let's modify squares.py. Open up the file from the command line with `nano square.py` and modify the script so that it prints the fourth power of numbers (hey they're still square numbers unlike our previous version of cubic powers). The script should look like this:
+Once again, let's modify numbers.py. Open up the file from the command line with `nano numbers.py` and modify the script so that it prints the fourth power of numbers. The script should look like this:
 
 ```for i in range(10):
     print(i**4)
@@ -48,7 +48,7 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   squares.py
+	modified:   numbers.py
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
@@ -59,7 +59,7 @@ Now for our new wizardry! Execute the command `git stash`. Afterwards, do anothe
 
 ## Further Exploration: `git stash list`, `git stash show`, and `git stash apply`
 
-You should see that we're back to a clean working tree. You can further see this by using the bash command `cat` which will print the contents of a file to the command line, so in this case try out `cat squares.py`. You should see that our file has reverted back to the previous version where we were actually cubing our numbers.
+You should see that we're back to a clean working tree. You can further see this by using the bash command `cat` which will print the contents of a file to the command line, so in this case try out `cat numbers.py`. You should see that our file has reverted back to the previous version where we were actually cubing our numbers.
 
 So what happened to our changes? Where did they go? We stashed them. To see stashes, you can use the command `git stash list`. Try it out now. 
 
@@ -79,7 +79,7 @@ Next, we're going to briefly investigate some merge conflicts. These occur when 
 
 If you haven't already, create a new branch called beta.
 
-## On Your New Branch, Modify squares.py To Raise Numbers to the 5th Power
+## On Your New Branch, Modify numbers.py To Raise Numbers to the 5th Power
 
 Once you modify the script, take a look at the state of affairs with `git status`. Then add and commit your changes with an appropriate description.
 
@@ -90,11 +90,11 @@ Now for the fun part. We're going to create a merge conflict. Execute `git stash
 You should be presented with a message:
 
 ```
-Auto-merging squares.py
-CONFLICT (content): Merge conflict in squares.py
+Auto-merging numbers.py
+CONFLICT (content): Merge conflict in numbers.py
 ```
 
-What's more, if you open up squares.py with `nano squares.py`, you'll see some bizarre changes:
+What's more, if you open up numbers.py with `nano numbers.py`, you'll see some bizarre changes:
 
 <img src="images/stash_merge_conflict.png" width=750>
 
@@ -104,11 +104,11 @@ So what do all of these symbols mean?
 * `=======` - the end of the original branch/the beginning of the branch being merged in (our stashed changes)
 * `>>>>>>> Stashed changes` - the end of our stashed changes
 
-This is because our new branch and the stashed changes modified the same line of the same file. Specifically, both modified line 2 of the squares.py file. As such, git is unsure of which version of line 2 we wish to incorporate. It has highlighted this for us, and its now our job to manually modify the file to resolve these conflicts, keeping the version we are interested in.
+This is because our new branch and the stashed changes modified the same line of the same file. Specifically, both modified line 2 of the numbers.py file. As such, git is unsure of which version of line 2 we wish to incorporate. It has highlighted this for us, and its now our job to manually modify the file to resolve these conflicts, keeping the version we are interested in.
 
 As a further note, this is why development would generally be seperated by files, or at the very least, sections of files; we can avoid merge conflicts and continue to collaborate together working seemlessly on a project. 
 
-You're squares.py file should now be back to numbers raised the the 4th degree as such:
+You're numbers.py file should now be back to numbers raised the the 4th degree as such:
 
 ```
 for i in range(10):
@@ -117,7 +117,7 @@ for i in range(10):
 
 (To do this, we simply manually opened up the file with nano and resolved the merge conflicts, including removing the notes left for us by git.)
 
-Checking `git status`, we now see that we have once again modified squares.py. As usual, we can now add and commit those changes to our version history. 
+Checking `git status`, we now see that we have once again modified numbers.py. As usual, we can now add and commit those changes to our version history. 
 
 ## Additional Resources
 

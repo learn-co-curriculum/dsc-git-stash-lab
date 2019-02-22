@@ -53,6 +53,8 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
+![image.png](attachment:image.png)
+
 ## Try Out `git stash`
 
 Now for our new wizardry! Execute the command `git stash`. Afterwards, do another `git status` to see what's going on.
@@ -69,6 +71,8 @@ Finally, if you want to reimplement your stashed changes you can use `git stash 
 
 Once you do that, you'll see a message as if we did `git status`, and you'll see that we once again have changes that have not been added or commited. What's more, while we've applied our stash, the stash still exists (you can see this once again with `git stash list`.
 
+![image.png](attachment:image.png)
+
 ## See All of the Commit History
 
 As a friendly reminder, you can see all of the commit history to date with `git log --graph`.
@@ -78,6 +82,8 @@ As a friendly reminder, you can see all of the commit history to date with `git 
 Next, we're going to briefly investigate some merge conflicts. These occur when you have two versions of the same file which both have the same line modified. This typically occurs when merging branches as we cleanly did in the last lab. Here, we'll cause the same behavior to occur by modifying our new branch and then attempting to apply our stashed changes.
 
 If you haven't already, create a new branch called beta.
+
+`git checkout -b beta`
 
 ## On Your New Branch, Modify numbers.py To Raise Numbers to the 5th Power
 

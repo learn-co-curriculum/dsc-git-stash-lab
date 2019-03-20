@@ -53,8 +53,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-![image.png](attachment:image.png)
-
+<img src="images/git_status1.png" width=850> 
 ## Try Out `git stash`
 
 Now for our new wizardry! Execute the command `git stash`. Afterward, do another `git status` to see what's going on.
@@ -71,7 +70,7 @@ Finally, if you want to reimplement your stashed changes you can use `git stash 
 
 Once you do that, you'll see a message as if we did `git status`, and you'll see that we once again have changes that have not been added or committed. What's more, while we've applied our stash, the stash still exists (you can see this once again with `git stash list`.
 
-![image.png](attachment:image.png)
+<img src="images/git_status2.png" width=850> 
 
 ## See All of the Commit History
 

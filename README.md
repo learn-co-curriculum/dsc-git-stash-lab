@@ -128,3 +128,9 @@ Checking `git status`, we now see that we have once again modified numbers.py. A
 In this lesson, we took a look at git stash as well as merge conflicts, and how to resolve them. Git stash is often useful when you need to quickly store away your changes and don't wish to create a new branch; you intend to quickly reintroduce these changes but need to put them to the side for a moment. This can be helpful if the remote repository has been updated and you first need to fetch and pull it, but have already also made some changes locally. In this and other cases, it's often easiest to first just stash the changes and then apply them subsequently. Similarly, we also saw that stashed changes can be applied to multiple branches. Overall, the more you use git and its myriad of tools, the more options you'll have for organizing and synchronizing your development process.
 
 
+
+
+```python
+# __SOLUTION__ 
+
+```

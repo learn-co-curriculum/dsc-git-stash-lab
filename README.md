@@ -53,7 +53,6 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-<img src="images/git_status1.png" width=850> 
 ## Try Out `git stash`
 
 Now for our new wizardry! Execute the command `git stash`. Afterward, do another `git status` to see what's going on.
@@ -70,8 +69,6 @@ Finally, if you want to reimplement your stashed changes you can use `git stash 
 
 Once you do that, you'll see a message as if we did `git status`, and you'll see that we once again have changes that have not been added or committed. What's more, while we've applied our stash, the stash still exists (you can see this once again with `git stash list`.
 
-<img src="images/git_status2.png" width=850> 
-
 ## See All of the Commit History
 
 As a friendly reminder, you can see all of the commit history to date with `git log --graph`.
@@ -81,8 +78,6 @@ As a friendly reminder, you can see all of the commit history to date with `git 
 Next, we're going to briefly investigate some merge conflicts. These occur when you have two versions of the same file which both have the same line modified. This typically occurs when merging branches as we cleanly did in the last lab. Here, we'll cause the same behavior to occur by modifying our new branch and then attempting to apply our stashed changes.
 
 If you haven't already, create a new branch called beta.
-
-`git checkout -b beta`
 
 ## On Your New Branch, Modify numbers.py To Raise Numbers to the 5th Power
 
@@ -101,7 +96,7 @@ CONFLICT (content): Merge conflict in numbers.py
 
 What's more, if you open up numbers.py with `nano numbers.py`, you'll see some bizarre changes:
 
-<img src="images/stash_merge_conflict.png" width="750">
+<img src="images/stash_merge_conflict.png" width=750>
 
 So what do all of these symbols mean?
 
@@ -109,7 +104,7 @@ So what do all of these symbols mean?
 * `=======` - the end of the original branch/the beginning of the branch being merged in (our stashed changes)
 * `>>>>>>> Stashed changes` - the end of our stashed changes
 
-This is because our new branch and the stashed changes modified the same line of the same file. Specifically, both modified line 2 of the numbers.py file. As such, git is unsure of which version of line 2 we wish to incorporate. It has highlighted this for us, and its now our job to manually modify the file to resolve these conflicts, keeping the version we are interested in.
+This is because our new branch and the stashed changes modified the same line of the same file. Specifically, both modified line 2 of the numbers.py file. As such, git is unsure of which version of line 2 we wish to incorporate. It has highlighted this for us, and it’s now our job to manually modify the file to resolve these conflicts, keeping the version we are interested in.
 
 As a further note, this is why development would generally be separated by files, or at the very least, sections of files; we can avoid merge conflicts and continue to collaborate together working seamlessly on a project. 
 
@@ -130,6 +125,11 @@ Checking `git status`, we now see that we have once again modified numbers.py. A
 
 ## Summary
 
-In this lesson we took a look at git stash as well as merge conflicts, and how to resolve them. Git stash is often useful when you need to quickly store away your changes and don't wish to create a new branch; you intend to quickly reintroduce these changes but need to put them to the side for a moment. This can be helpful if the remote repository has been updated and you first need to fetch and pull it, but have already also made some changes locally. In this and other cases, it's often easiest to first just stash the changes and then apply them subsequently. Similarly, we also saw that stashed changes can be applied to multiple branches. Overall, the more you use git and its myriad of tools, the more options you'll have for organizing and synchronizing your development process.
+In this lesson, we took a look at git stash as well as merge conflicts, and how to resolve them. Git stash is often useful when you need to quickly store away your changes and don't wish to create a new branch; you intend to quickly reintroduce these changes but need to put them to the side for a moment. This can be helpful if the remote repository has been updated and you first need to fetch and pull it, but have already also made some changes locally. In this and other cases, it's often easiest to first just stash the changes and then apply them subsequently. Similarly, we also saw that stashed changes can be applied to multiple branches. Overall, the more you use git and its myriad of tools, the more options you'll have for organizing and synchronizing your development process.
 
 
+
+
+```python
+
+```

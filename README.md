@@ -18,11 +18,12 @@ You will be able to:
 
 Since we're doing another git investigation, let's start by working from our previously created git repository.
 
-## Check `git status`
+## Check git status
 
 Hopefully, you should see the usual:  
 
-```On branch master
+```
+On branch master
 nothing to commit, working tree clean
 ```
 
@@ -34,11 +35,12 @@ Now that we have a clean working directory, let's muck things up! (Sorry if you 
 
 Once again, let's modify numbers.py. Open up the file from the command line with `nano numbers.py` and modify the script so that it prints the fourth power of numbers. The script should look like this:
 
-```for i in range(10):
-    print(i**4)
+```python
+for i in range(10):
+    print(i**4)    
 ```
 
-## Check `git status` Again
+## Check git status Again
 
 This time, you should see something like:
 
@@ -53,11 +55,11 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-## Try Out `git stash`
+## Try Out git stash
 
 Now for our new wizardry! Execute the command `git stash`. Afterward, do another `git status` to see what's going on.
 
-## Further Exploration: `git stash list`, `git stash show`, and `git stash apply`
+## Further Exploration: git stash list, git stash show, and git stash apply
 
 You should see that we're back to a clean working tree. You can further see this by using the bash command `cat` which will print the contents of a file to the command line, so in this case, try out `cat numbers.py`. You should see that our file has reverted back to the previous version where we were actually cubing our numbers.
 
@@ -65,7 +67,7 @@ So what happened to our changes? Where did they go? We stashed them. To see stas
 
 If you want a few more details about the stash, you can use `git stash show`. Again, give it a try.
 
-Finally, if you want to reimplement your stashed changes you can use `git stash apply`. Let's go ahead and reapply our changes (raising numbers to the fourth power rather than the third). 
+Finally, if you want to re-implement your stashed changes you can use `git stash apply`. Let's go ahead and reapply our changes (raising numbers to the fourth power rather than the third). 
 
 Once you do that, you'll see a message as if we did `git status`, and you'll see that we once again have changes that have not been added or committed. What's more, while we've applied our stash, the stash still exists (you can see this once again with `git stash list`.
 
@@ -110,7 +112,7 @@ As a further note, this is why development would generally be separated by files
 
 You're numbers.py file should now be back to numbers raised the 4th degree as such:
 
-```
+```python
 for i in range(10):
     print(i**4)
 ```

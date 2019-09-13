@@ -69,7 +69,7 @@ If you want a few more details about the stash, you can use `git stash show`. Ag
 
 Finally, if you want to re-implement your stashed changes you can use `git stash apply`. Let's go ahead and reapply our changes (raising numbers to the fourth power rather than the third). 
 
-Once you do that, you'll see a message as if we did `git status`, and you'll see that we once again have changes that have not been added or committed. What's more, while we've applied our stash, the stash still exists (you can see this once again with `git stash list`.
+Once you do that, you'll see a message as if we did `git status`, and you'll see that we once again have changes that have not been added or committed. What's more, while we've applied our stash, the stash still exists (you can see this once again with `git stash list`).
 
 ## See All of the Commit History
 
@@ -110,7 +110,7 @@ This is because our new branch and the stashed changes modified the same line of
 
 As a further note, this is why development would generally be separated by files, or at the very least, sections of files; we can avoid merge conflicts and continue to collaborate together working seamlessly on a project. 
 
-You're numbers.py file should now be back to numbers raised the 4th degree as such:
+Your numbers.py file should now be back to numbers raised the 4th degree as such:
 
 ```python
 for i in range(10):

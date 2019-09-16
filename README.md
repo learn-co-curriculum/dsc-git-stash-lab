@@ -11,7 +11,7 @@ You've started to see some of the awesome power of git as a tool for version con
 You will be able to:
 
 * Explain some use cases for `git stash`
-* Use a git stash to store changes
+* Use git stash to store changes
 * Apply stashed changes to multiple branches
 
 ## Return to Your Git Repository/Folder from the Git Merge Lab

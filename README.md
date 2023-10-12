@@ -1,4 +1,3 @@
-
 # Git Stash - Lab
 
 ## Introduction
@@ -103,7 +102,7 @@ CONFLICT (content): Merge conflict in numbers.py
 
 What's more, if you open up `numbers.py` with `nano numbers.py`, you'll see some bizarre changes:
 
-<img src="images/stash_merge_conflict.png" width=750>
+<img src="https://curriculum-content.s3.amazonaws.com/data-science/images/stash_merge_conflict.png" width=750>
 
 So what do all of these symbols mean?
 
